@@ -1,0 +1,117 @@
+/* ฟอนต์และรีเซ็ต */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f5a7d1, #fbe7a1);
+    overflow: hidden;
+  }
+  
+  /* กล่องกลาง */
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* กล่องสีขาว */
+  .content {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* โบว์ลอยน่ารัก */
+  .bow {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    opacity: 0.6;
+    animation: float 3s ease-in-out infinite;
+    z-index: 1;
+  }
+  
+  /* ลิงก์ไม่มีเส้นใต้ */
+  .name-link {
+    text-decoration: none;
+  }
+  
+  /* ข้อความชื่อ */
+  .name {
+    position: relative;
+    font-size: 64px;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    color: #333;
+    z-index: 2;
+    animation: popIn 1.2s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  /* hover effect: ขยายเบา ๆ */
+  .name-link:hover .name {
+    transform: scale(1.05);
+  }
+  
+  /* แอนิเมชัน: ลอย */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* แอนิเมชัน: ค่อย ๆ โผล่ */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* แอนิเมชัน: เด้ง */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    80% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .content {
+      width: 90%;
+      height: 180px;
+    }
+  
+    .bow {
+      width: 280px;
+    }
+  
+    .name {
+      font-size: 48px;
+    }
+  }

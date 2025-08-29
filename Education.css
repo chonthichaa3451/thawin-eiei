@@ -1,0 +1,117 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Itim", cursive;  /* ใช้ฟอนต์ Itim */
+    background-color: #ffd6e0; /* ชมพูอ่อน */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* เอฟเฟกต์เวลาโหลดหน้า */
+  }
+  
+  /* หัวข้อ */
+  .title {
+    background-color: #f78da7;
+    color: black;
+    font-size: 2rem;
+    padding: 10px 25px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 30px;
+    animation: bounce 1.5s ease infinite alternate;
+  }
+  
+  /* กล่องข้อความ */
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+  }
+  
+  .text {
+    background: white;
+    border: 2px solid #f78da7;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .heart {
+    color: #f78da7;
+    font-size: 1.5rem;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* ปุ่ม Home */
+  .home-btn {
+    background-color: #f78da7;
+    color: black;
+    font-size: 1.4rem;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .home-btn:hover {
+    background-color: #ff5c8a;
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+  }
+  
+  /* เอฟเฟกต์อนิเมชัน */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .text {
+      font-size: 1.1rem;
+      padding: 8px 15px;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
